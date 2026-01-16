@@ -20,7 +20,6 @@ export default function Signup() {
     e.preventDefault();
     setLoading(true);
 
-    // API call later
     setTimeout(() => {
       setLoading(false);
       navigate("/login");

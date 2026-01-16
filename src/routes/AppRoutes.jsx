@@ -3,6 +3,9 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Dashboard from "../pages/Dashboard";
 import { useAuth } from "../context/AuthContext";
+import Debugger from "../pages/Debugger";
+import History from "../pages/History";
+
 
 export default function AppRoutes() {
   const { isAuth } = useAuth();
@@ -15,6 +18,14 @@ export default function AppRoutes() {
         path="/dashboard"
         element={isAuth ? <Dashboard /> : <Navigate to="/login" />}
       />
+      <Route
+      path="/debug"
+      element={isAuth ? <Debugger /> : <Navigate to="/login" />}
+      />
+      <Route
+      path="/history"
+      element={isAuth ? <History /> : <Navigate to="/login" />}
+    />
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
