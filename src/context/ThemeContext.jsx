@@ -9,7 +9,6 @@ export function ThemeProvider({ children }) {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  // 🔥 THIS IS THE KEY FIX
   useEffect(() => {
     const root = document.documentElement;
 
